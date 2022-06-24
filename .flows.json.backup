@@ -50,7 +50,8 @@
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
@@ -189,7 +190,10 @@
             [
                 "b1cdde78e6055f5d",
                 "52fccb6122c0e163",
-                "978daeec86f8629a"
+                "595cf2c8119f0ce4",
+                "a0178f4033422fac",
+                "06da9acb35ad3ae0",
+                "9aad50c64975f149"
             ]
         ]
     },
@@ -207,8 +211,8 @@
         "correl": "",
         "expiry": "",
         "broker": "70fa3fbf4cc3b0d4",
-        "x": 550,
-        "y": 320,
+        "x": 530,
+        "y": 400,
         "wires": []
     },
     {
@@ -216,7 +220,7 @@
         "type": "ui_text",
         "z": "91f3c68d9b35446b",
         "group": "affaf00e66ab9ab6",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -236,7 +240,7 @@
         "label": "",
         "tooltip": "",
         "group": "affaf00e66ab9ab6",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -301,16 +305,43 @@
         "wires": []
     },
     {
-        "id": "978daeec86f8629a",
+        "id": "595cf2c8119f0ce4",
+        "type": "ui_gauge",
+        "z": "91f3c68d9b35446b",
+        "name": "",
+        "group": "affaf00e66ab9ab6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3210",
+        "colors": [
+            "#a91e76",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 530,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a0178f4033422fac",
         "type": "ui_chart",
         "z": "91f3c68d9b35446b",
         "name": "",
         "group": "affaf00e66ab9ab6",
-        "order": 2,
-        "width": "6",
-        "height": "3",
+        "order": 3,
+        "width": 0,
+        "height": 0,
         "label": "chart",
-        "chartType": "line",
+        "chartType": "polar-area",
         "legend": "true",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
@@ -322,26 +353,80 @@
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
-        "useOneColor": false,
+        "useOneColor": true,
         "useUTC": false,
         "colors": [
-            "#3a76a1",
+            "#1f77b4",
             "#aec7e8",
-            "#ff7f0e",
+            "#a05f27",
             "#2ca02c",
             "#98df8a",
-            "#d62728",
-            "#ff9896",
+            "#2d9211",
+            "#ae1b19",
             "#9467bd",
             "#c5b0d5"
         ],
         "outputs": 1,
-        "useDifferentColor": false,
+        "useDifferentColor": true,
         "className": "",
         "x": 530,
         "y": 240,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "06da9acb35ad3ae0",
+        "type": "ui_gauge",
+        "z": "91f3c68d9b35446b",
+        "name": "",
+        "group": "affaf00e66ab9ab6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3210",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#361717"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 530,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9aad50c64975f149",
+        "type": "ui_gauge",
+        "z": "91f3c68d9b35446b",
+        "name": "",
+        "group": "affaf00e66ab9ab6",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3210",
+        "colors": [
+            "#144814",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 530,
+        "y": 360,
+        "wires": []
     }
 ]
